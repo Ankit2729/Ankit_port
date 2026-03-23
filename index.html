@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Ankit Kumar - Computer Science & Engineering Student | C++ \| Python \| Data Science \| ML Engineer Aspirant">
+    <meta name="theme-color" content="#0f0f23">
+    <title>Ankit Kumar - Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fira+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="background-canvas"></canvas>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Ankit Kumar</a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#certifications" class="nav-link">Certifications</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#resume" class="nav-link">Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-actions" style="display: flex; align-items: center; gap: 15px;">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode">
+                    <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" style="display: none;">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-wrapper">
+
+            <!-- LEFT: Profile Image -->
+            <div class="hero-image">
+                <img src="assets/Profile.png" alt="Ankit Kumar">
+            </div>
+
+            <!-- RIGHT: Content -->
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Hi, I'm <span class="gradient-text">Ankit Kumar</span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    CSE Student | C++ | Python | Data Science | ML Enthusiast
+                </p>
+
+                <div class="typing-container">
+                    <span class="typing-text" id="typingText"></span>
+                    <span class="cursor"></span>
+                </div>
+
+                <!-- Buttons + Social Icons -->
+                <div class="hero-buttons">
+
+                    <a href="#projects" class="btn btn-primary">
+                        View My Projects
+                    </a>
+
+                    <a href="#contact" class="btn btn-secondary">
+                        Get In Touch
+                    </a>
+
+                    <div class="social-links">
+
+                        <!-- GitHub -->
+                        <a href="https://github.com/Ankit2729" target="_blank" rel="noopener noreferrer"
+                            class="social-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 
+                            8.205 11.385.6.105.825-.255.825-.57 
+                            0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41
+                            -.135-.345-.72-1.41-1.23-1.695
+                            -.42-.225-1.02-.78-.015-.795.945-.015 
+                            1.62.87 1.845 1.23 1.08 1.815 
+                            2.805 1.305 3.495.99.105-.78.42-1.305 
+                            .765-1.605-2.67-.3-5.46-1.335-5.46-5.925 
+                            0-1.305.465-2.385 1.23-3.225
+                            -.12-.3-.54-1.53.12-3.18 
+                            0 0 1.005-.315 3.3 1.23.96-.27 
+                            1.98-.405 3-.405s2.04.135 
+                            3 .405c2.295-1.56 3.3-1.23 
+                            3.3-1.23.66 1.65.24 2.88.12 
+                            3.18.765.84 1.23 1.905 1.23 3.225 
+                            0 4.605-2.805 5.625-5.475 5.925.435.375 
+                            .81 1.095.81 2.22 0 1.605-.015 
+                            2.895-.015 3.3 0 .315.225.69 
+                            .825.57A12.001 12.001 0 0024 
+                            12c0-6.63-5.37-12-12-12z" />
+                            </svg>
+                        </a>
+
+                        <!-- LinkedIn -->
+                        <a href="https://linkedin.com/in/ankitk27" target="_blank" rel="noopener noreferrer"
+                            class="social-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569
+                            c0-1.328-.475-2.236-1.986-2.236
+                            -1.081 0-1.722.731-2.004 1.438
+                            -.103.25-.129.599-.129.948v5.419h-3.554
+                            s.05-8.736 0-9.646h3.554v1.364
+                            c.43-.664 1.196-1.608 2.906-1.608
+                            2.121 0 3.713 1.387 3.713 
+                            4.365v5.525zM5.337 8.855
+                            c-1.144 0-1.915-.758-1.915-1.704
+                            0-.951.77-1.704 1.968-1.704
+                            1.197 0 1.915.75 1.948 
+                            1.704 0 .946-.751 
+                            1.704-1.968 1.704zm1.529 
+                            11.597H3.808V9.856h3.058v10.596z" />
+                            </svg>
+                        </a>
+
+                        <!-- Email -->
+                        <a href="mailto:ankitk27904@gmail.com" class="social-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                <path d="m22 7-8.97 5.7
+                                a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                            </svg>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about animate-on-scroll">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I am a Computer Science and Engineering student at Lovely Professional University
+                        (CGPA: 7.80) with a strong passion for Data Science, Machine Learning, and
+                        building impactful solutions. I thrive on solving complex algorithmic problems and
+                        bringing ideas to life through clean, efficient code.
+                    </p>
+
+                    <p>
+                        My technical interests span machine learning, data analysis, satellite imagery
+                        processing, and competitive programming. I have hands-on experience with C++,
+                        Python, and tools like MySQL, Streamlit, and Google Colab, crafting applications
+                        that are functional, intuitive, and data-driven.
+                    </p>
+
+                    <p>
+                        Beyond academics, I actively pursue certifications and sharpen my skills through
+                        competitive programming. I have solved 180+ LeetCode problems and achieved a
+                        Contest Rating of 1594 — placing in the Top 24% globally.
+                    </p>
+
+                    <p>
+                        I am a strong believer in teamwork and adaptability. During my internship at
+                        The Apprentice Project, I coordinated a major app launch event, managing
+                        logistics and stakeholder engagement across institutional outreach.
+                    </p>
+
+                    <p>
+                        I aim to grow as a Machine Learning Engineer who builds meaningful, real-world
+                        solutions — combining innovation, analytical thinking, and precision
+                        in every project I undertake.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills animate-on-scroll">
+        <div class="container">
+            <h2 class="section-title">Skills &amp; Expertise</h2>
+
+            <div class="skills-modern-grid">
+
+                <div class="skill-card">
+                    <h3>Languages</h3>
+                    <div class="skill-tags">
+                        <span>C++</span>
+                        <span>Python</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Frameworks &amp; Libraries</h3>
+                    <div class="skill-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Pandas</span>
+                        <span>NumPy</span>
+                        <span>Scikit-Learn</span>
+                        <span>Matplotlib</span>
+                        <span>Seaborn</span>
+                        <span>OpenCV</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Tools &amp; Platforms</h3>
+                    <div class="skill-tags">
+                        <span>MySQL</span>
+                        <span>GitHub</span>
+                        <span>VS Code</span>
+                        <span>Google Colab</span>
+                        <span>Streamlit</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Core Subjects</h3>
+                    <div class="skill-tags">
+                        <span>Data Structures &amp; Algorithms</span>
+                        <span>Operating Systems</span>
+                        <span>Computer Networks</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Soft Skills</h3>
+                    <div class="skill-tags">
+                        <span>Problem-solving</span>
+                        <span>Analytical Thinking</span>
+                        <span>Teamwork</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects animate-on-scroll">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+
+                <!-- Project 1: Urban Expansion Analysis -->
+                
+
+                <!-- Project 2: GlobeRank Country Comparator -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/GlobeRank.png" alt="GlobeRank Country Comparator">
+                    </div>
+                    <div class="project-content">
+                        <h3>GlobeRank — Country Comparator</h3>
+                        <p>Dynamic country comparison tool using Trees, Hash Maps and custom sorting algorithms,
+                            improving metric filtering speed by 30%. Scalable real-time filtering, sorting,
+                            and persistent data storage.</p>
+                        <div class="project-tags">
+                            <span class="tag">C++</span>
+                            <span class="tag">Trees</span>
+                            <span class="tag">Hash Maps</span>
+                        </div>
+                        <div class="project-links" style="display:flex;gap:10px;margin-top:12px;">
+                            <a href="https://github.com/Ankit2729/GlobeRank-Country-Comparator" target="_blank"
+                                class="btn btn-small btn-outline">GitHub</a>
+                            <button class="btn btn-small btn-outline project-btn" data-project="2">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Heart Disease Prediction -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/heart-disease.png" alt="Heart Disease Prediction">
+                    </div>
+                    <div class="project-content">
+                        <h3>Heart Disease Prediction</h3>
+                        <p>ML-based heart disease prediction app using logistic regression on UCI dataset,
+                            achieving 82% accuracy. Features user-friendly input forms, real-time predictions,
+                            and downloadable reports.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Streamlit</span>
+                            <span class="tag">Scikit-Learn</span>
+                        </div>
+                        <div class="project-links" style="display:flex;gap:10px;margin-top:12px;">
+                            <a href="https://github.com/Ankit2729" target="_blank"
+                                class="btn btn-small btn-outline">GitHub</a>
+                            <button class="btn btn-small btn-outline project-btn" data-project="3">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications animate-on-scroll">
+        <div class="container">
+            <h2 class="section-title">Certifications &amp; Achievements</h2>
+
+            <div class="certifications-grid">
+
+                <a href="https://www.linkedin.com/in/ankitk27" target="_blank" class="cert-card">
+                    <div class="cert-overlay">View Certificate →</div>
+                    <div class="cert-icon">🤖</div>
+                    <h3>Build Generative AI Apps with No-Code Tools</h3>
+                    <p>Infosys SpringBoard</p>
+                    <span class="cert-year">Aug 2025</span>
+                </a>
+
+                <a href="https://www.linkedin.com/in/ankitk27" target="_blank" class="cert-card">
+                    <div class="cert-overlay">View Certificate →</div>
+                    <div class="cert-icon">📐</div>
+                    <h3>Computational Number Theory and Algebra</h3>
+                    <p>NPTEL</p>
+                    <span class="cert-year">April 2025</span>
+                </a>
+
+                <a href="https://leetcode.com/u/ankitk27" target="_blank" class="cert-card">
+                    <div class="cert-overlay">View Profile →</div>
+                    <div class="cert-icon">🏆</div>
+                    <h3>180+ LeetCode Problems Solved</h3>
+                    <p>Contest Rating: 1594 · Global Rank 198k / 833k · Top 24%</p>
+                    <span class="cert-year">Present</span>
+                </a>
+
+            </div>
+        </div>
+        <!-- Resume Section -->
+        <section id="resume" class="resume animate-on-scroll">
+            <div class="resume-container">
+                <div class="resume-header">
+                    <h2 class="section-title">My Resume</h2>
+                    <div class="resume-contact-tags">
+                        <a href="mailto:ankitk27904@gmail.com" class="contact-tag">
+                            <span>📧 ankitk27904@gmail.com</span>
+                        </a>
+                        <a href="tel:+919876242345" class="contact-tag">
+                            <span>📱 +91-9876242345</span>
+                        </a>
+                        <a href="https://linkedin.com/in/ankitk27" target="_blank" class="contact-tag">
+                            <span>🔗 LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/Ankit2729" target="_blank" class="contact-tag">
+                            <span>💻 GitHub</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="resume-tabs">
+                    <button class="tab-btn active" data-tab="education">Education</button>
+                    <button class="tab-btn" data-tab="skills-tab">Skills</button>
+                    <button class="tab-btn" data-tab="projects-tab">Projects</button>
+                    <button class="tab-btn" data-tab="training">Training</button>
+                    <button class="tab-btn" data-tab="certificates-tab">Certificates</button>
+                </div>
+
+                <div class="resume-content">
+                    <!-- Education Tab -->
+                    <div class="tab-content active" id="education">
+                        <div class="resume-card">
+                            <div class="resume-card-header">
+                                <div>
+                                    <h3 class="resume-card-title">Bachelor of Technology - Computer Science and
+                                        Engineering</h3>
+                                    <p class="resume-card-subtitle">Lovely Professional University, Punjab</p>
+                                </div>
+                                <span class="resume-card-date">Aug 2023 - Present</span>
+                            </div>
+                            <div class="resume-card-body">
+                                <ul>
+                                    <li>Current CGPA: 7.80</li>
+                                    <li>Actively pursuing specialization in Machine Learning and Data Science.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="resume-card">
+                            <div class="resume-card-header">
+                                <div>
+                                    <h3 class="resume-card-title">Class 12 (PCM)</h3>
+                                    <p class="resume-card-subtitle">Pathseekers School, Beas, Punjab</p>
+                                </div>
+                                <span class="resume-card-date">March 2023</span>
+                            </div>
+                            <div class="resume-card-body">
+                                <ul>
+                                    <li>Percentage: 84.4%</li>
+                                    <li>Stream: PCM (Physics, Chemistry, Mathematics)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="resume-card">
+                            <div class="resume-card-header">
+                                <div>
+                                    <h3 class="resume-card-title">Class 10</h3>
+                                    <p class="resume-card-subtitle">Pathseekers School, Beas, Punjab</p>
+                                </div>
+                                <span class="resume-card-date">March 2021</span>
+                            </div>
+                            <div class="resume-card-body">
+                                <ul>
+                                    <li>Percentage: 85.8%</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skills Tab -->
+                    <div class="tab-content" id="skills-tab">
+                        <div class="resume-card">
+                            <h3 class="resume-card-title" style="margin-bottom: 20px;">Technical Expertise</h3>
+                            <div class="resume-card-body">
+                                <div class="skills-modern-grid"
+                                    style="grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                                    <div>
+                                        <p class="resume-card-subtitle">Languages</p>
+                                        <div class="skill-tags">
+                                            <span>C++</span><span>Python</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="resume-card-subtitle">Frameworks &amp; Libraries</p>
+                                        <div class="skill-tags">
+                                            <span>HTML</span><span>CSS</span><span>Pandas</span><span>NumPy</span><span>Scikit-Learn</span><span>OpenCV</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="resume-card-subtitle">Tools/Platforms</p>
+                                        <div class="skill-tags">
+                                            <span>MySQL</span><span>GitHub</span><span>VS Code</span><span>Google
+                                                Colab</span><span>Streamlit</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="resume-card-subtitle">Soft Skills</p>
+                                        <div class="skill-tags">
+                                            <span>Problem-solving</span><span>Analytical
+                                                Thinking</span><span>Teamwork</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projects Tab -->
+                    <div class="tab-content" id="projects-tab">
+                        <div class="resume-card">
+                            <div class="resume-card-header">
+                                <div>
+                                    <h3 class="resume-card-title">Urban Expansion Analysis using Satellite Imagery</h3>
+                                    <p class="resume-card-subtitle">Python, OpenCV, GIS</p>
+                                </div>
+                                <span class="resume-card-date">Feb 2026 - Present</span>
+                            </div>
+                            <div class="resume-card-body">
+                                <ul>
+                                    <li>Developed satellite-image based system to detect urban growth using temporal
+                                        image comparison.</li>
+                                    <li>Processed multispectral imagery from the Copernicus Programme to quantify
+                                        built-up area expansion.</li>
+                                    <li>Automated change detection workflow generating measurable urban growth
+                                        statistics.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="resume-card">
+                            <div class="resume-card-header">
+                                <div>
+                                    <h3 class="resume-card-title">GlobeRank — Country Comparator</h3>
+                                    <p class="resume-card-subtitle">C++ | Trees, Hash Maps, Custom Sorting</p>
+                                </div>
+                                <span class="resume-card-date">Oct 2025 – Nov 2025</span>
+                            </div>
+                            <div class="resume-card-body">
+                                <ul>
+                                    <li>Dynamic country comparison tool using Trees, Hash Maps and custom sorting
+                                        algorithms.</li>
+                                    <li>Improved metric filtering speed by 30% with scalable real-time filtering and
+                                        sorting.</li>
+                                    <li>Persistent data storage demonstrating strong problem-solving and optimization
+                                        skills.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="resume-card">
+                            <div class="resume-card-header">
+                                <div>
+                                    <h3 class="resume-card-title">Heart Disease Prediction Web Application</h3>
+                                    <p class="resume-card-subtitle">Python, Streamlit, Machine Learning</p>
+                                </div>
+                                <span class="resume-card-date">Aug 2025</span>
+                            </div>
+                            <div class="resume-card-body">
+                                <ul>
+                                    <li>Built an ML-based heart disease prediction app using logistic regression on UCI
+                                        dataset achieving 82% accuracy.</li>
+                                    <li>Implemented user-friendly input forms, real-time predictions, and downloadable
+                                        reports.</li>
+                                    <li>Improved model interpretability through interactive Streamlit deployment.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Training Tab -->
+                    <div class="tab-content" id="training">
+                        <div class="resume-card">
+                            <div class="resume-card-header">
+                                <div>
+                                    <h3 class="resume-card-title">AlgoTutor (Ed-Tech Company)</h3>
+                                    <p class="resume-card-subtitle">Competitive Programming Training</p>
+                                </div>
+                                <span class="resume-card-date">June 2025</span>
+                            </div>
+                            <div class="resume-card-body">
+                                <ul>
+                                    <li>Six-week intensive competitive programming course focusing on DSA and
+                                        problem-solving.</li>
+                                    <li>Practiced weekly contests on LeetCode, CodeForces, and VJudge.</li>
+                                    <li>Enhanced coding efficiency, analytical thinking, and technical interview
+                                        readiness.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="resume-card">
+                            <div class="resume-card-header">
+                                <div>
+                                    <h3 class="resume-card-title">Operations Intern – The Apprentice Project</h3>
+                                    <p class="resume-card-subtitle">MentorMe Foundation</p>
+                                </div>
+                                <span class="resume-card-date">July 2024</span>
+                            </div>
+                            <div class="resume-card-body">
+                                <ul>
+                                    <li>Coordinated a major app launch event in Moga, Punjab, managing logistics and
+                                        institutional outreach.</li>
+                                    <li>Collaborated with cross-functional teams to ensure smooth execution and
+                                        stakeholder engagement.</li>
+                                    <li>Contributed to structured planning and on-ground execution of the launch
+                                        initiative.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificates Tab -->
+                    <div class="tab-content" id="certificates-tab">
+                        <div class="resume-card">
+                            <div class="resume-card-header">
+                                <div>
+                                    <h3 class="resume-card-title">Build Generative AI Apps and Solutions with No-Code
+                                        Tools</h3>
+                                    <p class="resume-card-subtitle">Infosys SpringBoard</p>
+                                </div>
+                                <span class="resume-card-date">Aug 2025</span>
+                            </div>
+                        </div>
+                        <div class="resume-card">
+                            <div class="resume-card-header">
+                                <div>
+                                    <h3 class="resume-card-title">Computational Number Theory and Algebra</h3>
+                                    <p class="resume-card-subtitle">NPTEL</p>
+                                </div>
+                                <span class="resume-card-date">April 2025</span>
+                            </div>
+                        </div>
+                        <div class="resume-card">
+                            <div class="resume-card-header">
+                                <div>
+                                    <h3 class="resume-card-title">LeetCode &ndash; 180+ Problems Solved</h3>
+                                    <p class="resume-card-subtitle">Contest Rating: 1594 &middot; Global Rank 198k/833k
+                                        &middot; Top 24%</p>
+                                </div>
+                                <span class="resume-card-date">Present</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-download">
+                    <a href="assets/Ankit_Kumar_Resume.pdf" class="btn btn-primary" download>
+                        📥 Download Full Resume
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact animate-on-scroll">
+            <div class="container">
+                <div class="contact-header">
+                    <h2 class="section-title">Get In <span class="title-underline">Touch</span></h2>
+                    <p class="contact-subtitle">Have a question or want to work together? Fill out the form below or
+                        reach
+                        out directly through my contact information.</p>
+                </div>
+
+                <div class="contact-wrapper">
+                    <!-- Left: Contact Form -->
+                    <div class="contact-form-box">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="your.email@example.com"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Your message..."
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit">Send Message</button>
+                        </form>
+                    </div>
+
+                    <!-- Right: Contact Information -->
+                    <div class="contact-info-box">
+                        <h3 class="info-title">Contact Information</h3>
+
+                        <div class="info-list">
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <rect width="20" height="16" x="2" y="4" rx="2" />
+                                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                                    </svg>
+                                </div>
+                                <div class="info-text">
+                                    <span class="info-label">Email</span>
+                                    <a href="mailto:ankitk27904@gmail.com">ankitk27904@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                    </svg>
+                                </div>
+                                <div class="info-text">
+                                    <span class="info-label">Phone</span>
+                                    <a href="tel:+919876242345">+91-9876242345</a>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                        <rect width="4" height="12" x="2" y="9" />
+                                        <circle cx="4" cy="4" r="2" />
+                                    </svg>
+                                </div>
+                                <div class="info-text">
+                                    <span class="info-label">LinkedIn</span>
+                                    <a href="https://linkedin.com/in/ankitk27"
+                                        target="_blank">linkedin.com/in/ankitk27</a>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                                        <path d="M9 18c-4.51 2-4.51-2-7-2" />
+                                    </svg>
+                                </div>
+                                <div class="info-text">
+                                    <span class="info-label">GitHub</span>
+                                    <a href="https://github.com/Ankit2729" target="_blank">github.com/Ankit2729</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-footer-text">
+                    <p>Looking forward to hearing from you!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2026 Copyright of Ankit Kumar</p>
+            </div>
+        </footer>
+
+        <!-- Modal for Project Details -->
+        <div id="projectModal" class="modal">
+            <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <div id="modalBody"></div>
+            </div>
+        </div>
+
+        <!-- Back to Top Button -->
+        <button id="backToTop" class="back-to-top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+        </button>
+
+        <!-- JavaScript -->
+        <script src="script.js"></script>
+</body>
+
+</html>
